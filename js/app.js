@@ -46,19 +46,25 @@ var trace1 = {
     y: ids,
     type: "bar",
     orientation: 'h',
-    name:top_labels
+    name:top_labels,
+    marker: {
+      color: '#4750b8'
+    }
   };
   
   var data = [trace1];
   
   var layout = {
-    title: "Top 10 Bacteria Cultures Found",
+    title: "<b>Top 10 Bacteria Cultures Found</b>",
+    font: {
+      color: 'black'
+    },
     xaxis:{title: "Sample Values"},
     yaxis: {title:"OTU ID"}
   };
   
   Plotly.newPlot("bar", data, layout);
-
+// bubble chart
   var trace2 = {
     x: otu_ids,
     y: sample_values,
@@ -66,14 +72,18 @@ var trace1 = {
     mode:'markers',
     marker: {
       size: sample_values,
-      color:otu_ids}
+      color:otu_ids,
+      colorscale:'Blues'}
       
   };
-// bubble chart
+
   var data2 = [trace2];
 
   var layout2 = {
-    title: 'Bacteria Cultures Per Sample',
+    title: "<b>Bacteria Cultures Per Sample</b>",
+    font: {
+      color: 'black'
+    },
     xaxis:{title: "OTU ID"},
     yaxis: {title:"Sample Values"},
     showlegend: false
@@ -96,7 +106,7 @@ var trace1 = {
     {
       domain: { x: [0, 1], y: [0, 1] },
       value: wfreq,
-      title: { text: "<span style='color:black'>Belly Button Washing Frequency<br><span style='color:#0124C0'>Scrubs Per Week" },
+      title: { text: "<span style='color:black'><b>Belly Button Washing Frequency</b><br><span style='color:#0124C0'>Scrubs Per Week" },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
@@ -171,24 +181,32 @@ function optionChanged() {
     console.log(wfreq)
 
     // bar chart
-var trace1 = {
-  x: top_values,
-  y: ids,
-  type: "bar",
-  orientation: 'h',
-  name:top_labels
-};
+    var trace1 = {
+      x: top_values,
+      y: ids,
+      type: "bar",
+      orientation: 'h',
+      name:top_labels,
+      marker: {
+        color: '#4750b8'
+      }
+    };
 
 var data = [trace1];
 
 var layout = {
-  title: "Top 10 Bacteria Cultures Found",
+  title: "<b>Top 10 Bacteria Cultures Found</b>",
+  font: {
+    color: 'black'
+  },
   xaxis:{title: "Sample Values"},
   yaxis: {title:"OTU ID"}
 };
 
 Plotly.newPlot("bar", data, layout);
 
+
+/// bubble chart
 var trace2 = {
   x: otu_ids,
   y: sample_values,
@@ -196,15 +214,19 @@ var trace2 = {
   mode:'markers',
   marker: {
     size: sample_values,
-    color:otu_ids}
+    color:otu_ids,
+    colorscale:'Blues'}
     
 };
 
-/// bubble chart
+
   var data2 = [trace2];
 
   var layout2 = {
-    title: 'Bacteria Cultures Per Sample',
+    title: "<b>Bacteria Cultures Per Sample</b>",
+    font: {
+      color: 'black'
+    },
     xaxis:{title: "OTU ID"},
     yaxis: {title:"Sample Values"},
     showlegend: false
@@ -228,7 +250,7 @@ var trace2 = {
     {
       domain: { x: [0, 1], y: [0, 1] },
       value: wfreq,
-      title: { text: "<span style='color:black'>Belly Button Washing Frequency<br><span style='color:#0124C0'>Scrubs Per Week" },
+      title: { text: "<span style='color:black'><b>Belly Button Washing Frequency</b><br><span style='color:#0124C0'>Scrubs Per Week" },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
