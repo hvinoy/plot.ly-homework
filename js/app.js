@@ -110,7 +110,8 @@ var trace1 = {
       type: "indicator",
       mode: "gauge+number",
       gauge: {
-        axis: { range: [null,9]},
+        axis: { range: [null,9], 
+    },
         bar: { color: "#0124C0" },
         steps: [
           { range: [0, 1], color: "#AAB6D6" },
